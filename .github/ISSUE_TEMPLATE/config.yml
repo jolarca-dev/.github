@@ -1,0 +1,15 @@
+# Issue template chooser configuration
+# This controls which templates appear when users click "New issue"
+# Docs: https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
+
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/jolarca-dev/.github/security/advisories/new
+    about: Report a security vulnerability privately (SECURITY.md in each repo)
+  - name: Compliance question
+    url: https://github.com/jolarca-dev/jolarca-compliance/issues/new
+    about: Questions about SOC 2, ISO 27001, or GDPR compliance
+  - name: Legal inquiry
+    url: https://github.com/jolarca-dev/jolarca-legal/issues/new
+    about: Contract, terms of service, or legal policy questions

@@ -1,0 +1,11 @@
+# CODEOWNERS — Organization-wide default owners
+# Docs: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# These are the default owners for the .github repository itself.
+# Individual repos have their own CODEOWNERS files.
+
+# Everything in this repo requires review from infrastructure team
+* @jolarca-dev/infrastructure
+
+# Workflow changes require additional security review
+.github/workflows/ @jolarca-dev/infrastructure @jolarca-dev/security

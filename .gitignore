@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.lock.hcl
+
+# Secrets (never commit)
+.env
+.envrc
+*.pem
+*.key
+secrets/
+
+# Generated
+*.sarif
+trivy-*.json
+checkov-*.json
