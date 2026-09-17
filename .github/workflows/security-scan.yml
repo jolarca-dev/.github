@@ -241,7 +241,7 @@ jobs:
           fetch-depth: 0
 
       - name: Run gitleaks
-        uses: gitleaks/gitleaks-action@4f9a10a3b6e2a7a1b5d6b5a5e5e5e5e5e5e5e5e5 # v2.3.4
+        uses: gitleaks/gitleaks-action@e6dab246340401bf53eec993b8f05aebe80ac636 # v2.3.4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         continue-on-error: true
