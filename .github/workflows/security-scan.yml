@@ -72,7 +72,7 @@ jobs:
 
       - name: Run Trivy vulnerability scanner (npm)
         if: contains(steps.detect.outputs.managers, 'npm')
-        uses: aquasecurity/trivy-action@master
+        uses: aquasecurity/trivy-action@d2a0b60797ff03db6132bd4e2b293f9b37081297 # master
         with:
           scan-type: 'fs'
           scan-ref: '.'
@@ -83,7 +83,7 @@ jobs:
 
       - name: Run Trivy vulnerability scanner (Python)
         if: contains(steps.detect.outputs.managers, 'pip')
-        uses: aquasecurity/trivy-action@master
+        uses: aquasecurity/trivy-action@d2a0b60797ff03db6132bd4e2b293f9b37081297 # master
         with:
           scan-type: 'fs'
           scan-ref: '.'
@@ -125,7 +125,7 @@ jobs:
 
       - name: Run Trivy container scan
         if: steps.find-dockerfiles.outputs.dockerfiles != ''
-        uses: aquasecurity/trivy-action@master
+        uses: aquasecurity/trivy-action@d2a0b60797ff03db6132bd4e2b293f9b37081297 # master
         with:
           scan-type: 'config'
           scan-ref: '.'
@@ -158,7 +158,7 @@ jobs:
 
       - name: Run Checkov (Terraform)
         if: contains(steps.detect-iac.outputs.iac, 'terraform')
-        uses: bridgecrewio/checkov-action@master
+        uses: bridgecrewio/checkov-action@444c9db6fa75e2d9c19ebf1fde7322089be9009e # master
         with:
           directory: terraform/
           framework: terraform
@@ -169,7 +169,7 @@ jobs:
 
       - name: Run Checkov (Kubernetes)
         if: contains(steps.detect-iac.outputs.iac, 'kubernetes')
-        uses: bridgecrewio/checkov-action@master
+        uses: bridgecrewio/checkov-action@444c9db6fa75e2d9c19ebf1fde7322089be9009e # master
         with:
           directory: kubernetes/
           framework: kubernetes
