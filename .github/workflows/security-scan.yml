@@ -72,7 +72,7 @@ jobs:
 
       - name: Run Trivy vulnerability scanner (npm)
         if: contains(steps.detect.outputs.managers, 'npm')
-        uses: aquasecurity/trivy-action@master
+        uses: aquasecurity/trivy-action@c03d123cb480c08c69b054af418ea5e69fe6e57e  # master tip c03d123c; no release tag at this commit (latest release v0.36.0)
         with:
           scan-type: 'fs'
           scan-ref: '.'
@@ -83,7 +83,7 @@ jobs:
 
       - name: Run Trivy vulnerability scanner (Python)
         if: contains(steps.detect.outputs.managers, 'pip')
-        uses: aquasecurity/trivy-action@master
+        uses: aquasecurity/trivy-action@c03d123cb480c08c69b054af418ea5e69fe6e57e  # master tip c03d123c; no release tag at this commit (latest release v0.36.0)
         with:
           scan-type: 'fs'
           scan-ref: '.'
@@ -125,7 +125,7 @@ jobs:
 
       - name: Run Trivy container scan
         if: steps.find-dockerfiles.outputs.dockerfiles != ''
-        uses: aquasecurity/trivy-action@master
+        uses: aquasecurity/trivy-action@c03d123cb480c08c69b054af418ea5e69fe6e57e  # master tip c03d123c; no release tag at this commit (latest release v0.36.0)
         with:
           scan-type: 'config'
           scan-ref: '.'
@@ -158,7 +158,7 @@ jobs:
 
       - name: Run Checkov (Terraform)
         if: contains(steps.detect-iac.outputs.iac, 'terraform')
-        uses: bridgecrewio/checkov-action@master
+        uses: bridgecrewio/checkov-action@cc0e17d456ef1713bbfd963ebac19dc776775cb2 # v12.3128.0
         with:
           directory: terraform/
           framework: terraform
@@ -169,7 +169,7 @@ jobs:
 
       - name: Run Checkov (Kubernetes)
         if: contains(steps.detect-iac.outputs.iac, 'kubernetes')
-        uses: bridgecrewio/checkov-action@master
+        uses: bridgecrewio/checkov-action@cc0e17d456ef1713bbfd963ebac19dc776775cb2 # v12.3128.0
         with:
           directory: kubernetes/
           framework: kubernetes
@@ -241,7 +241,7 @@ jobs:
           fetch-depth: 0
 
       - name: Run gitleaks
-        uses: gitleaks/gitleaks-action@4f9a10a3b6e2a7a1b5d6b5a5e5e5e5e5e5e5e5e5 # v2.3.4
+        uses: gitleaks/gitleaks-action@e6dab246340401bf53eec993b8f05aebe80ac636 # v2.3.4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         continue-on-error: true
