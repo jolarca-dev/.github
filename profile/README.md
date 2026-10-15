@@ -50,7 +50,7 @@ We take compliance seriously — it's not an afterthought, it's architecture.
 
 - **Bug bounty:** Coming soon
 - **Vulnerability disclosure:** See `SECURITY.md` in each repository
-- **Security contacts:** security@jolarca.com
+- **Security contacts:** journey4oflife+jolarca.security@gmail.com — privacy / data-subject requests: journey4oflife+jolarca.privacy@gmail.com
 
 ## 📚 Documentation
 
